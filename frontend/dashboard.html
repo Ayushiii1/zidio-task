@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Excel Analytics</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="bg-art"></div>
+  <div class="bg-3d">
+    <!-- 3D SVG Illustration -->
+    <svg width="320" height="220" viewBox="0 0 320 220" fill="none">
+      <ellipse cx="160" cy="180" rx="130" ry="32" fill="#44d9e6" opacity="0.19"/>
+      <ellipse cx="160" cy="110" rx="110" ry="85" fill="#5468ff" opacity="0.13"/>
+      <ellipse cx="160" cy="65" rx="65" ry="45" fill="#ede7f6" opacity="0.21"/>
+      <image href="assets/images/excel-3d.png" x="90" y="55" width="140" height="120" />
+    </svg>
+  </div>
+  <div class="header" style="position:relative;z-index:10;">
+    <h2>Excel Analytics Dashboard</h2>
+    <div style="margin-left:auto"><a href="login.html" style="color:#fff;text-decoration:none;">Logout</a></div>
+  </div>
+  <nav class="sidebar" style="z-index:10;">
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="upload.html">Upload File</a>
+    <a href="reports.html">Reports</a>
+  </nav>
+  <main class="main-content" style="position:relative;z-index:10;">
+    <div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;">
+      <div class="stats-card" style="min-width:210px;">
+        <div class="icon" style="font-size:2.4rem;">📁</div>
+        <div style="font-size:1.1rem;">Total Uploads</div>
+        <div id="total-uploads" style="font-size:2rem;font-weight:bold;">12</div>
+      </div>
+      <div class="stats-card" style="min-width:210px;">
+        <div class="icon" style="font-size:2.4rem;">🗂️</div>
+        <div style="font-size:1.1rem;">File Types</div>
+        <div id="file-types" style="font-size:1.6rem;font-weight:bold;">CSV, XLSX</div>
+      </div>
+      <div class="stats-card" style="min-width:210px;">
+        <div class="icon" style="font-size:2.4rem;">📅</div>
+        <div style="font-size:1.1rem;">Last Upload</div>
+        <div id="recent-activity" style="font-size:1.1rem;">2025-07-24</div>
+      </div>
+    </div>
+    <section class="chart-section" style="margin-top:2rem;">
+      <h3 style="color:#5468ff;margin-bottom:2rem;">Analytics Overview</h3>
+      <div style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;">
+        <div style="flex:1;min-width:320px;">
+          <canvas id="barChart" height="180"></canvas>
+        </div>
+        <div style="flex:1;min-width:220px;max-width:300px;">
+          <canvas id="pieChart" height="180"></canvas>
+        </div>
+        <div style="flex:1;min-width:320px;">
+          <canvas id="lineChart" height="180"></canvas>
+        </div>
+      </div>
+    </section>
+    <section class="card" style="margin-top:2rem;">
+      <h3 style="color:#5468ff;margin-bottom:1rem;">Recent Activities</h3>
+      <table class="table-preview">
+        <thead><tr><th>Filename</th><th>Type</th><th>Date</th></tr></thead>
+        <tbody id="activity-table">
+          <tr><td>sales.csv</td><td>CSV</td><td>2025-07-24</td></tr>
+          <tr><td>budget.xlsx</td><td>XLSX</td><td>2025-07-22</td></tr>
+          <tr><td>leads.csv</td><td>CSV</td><td>2025-07-20</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/charts.js"></script>
+</body>
+</html>

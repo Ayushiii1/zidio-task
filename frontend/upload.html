@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload File - Excel Analytics</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Excel Analytics Dashboard</h2>
+  </div>
+  <nav class="sidebar">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="upload.html" class="active">Upload File</a>
+    <a href="reports.html">Reports</a>
+    <a href="login.html">Logout</a>
+  </nav>
+  <main class="main-content">
+    <section class="card">
+      <h2>Upload Excel/CSV File</h2>
+      <div class="upload-area" tabindex="0">
+        Click or Drag & Drop to upload your file.
+      </div>
+      <input type="file" id="fileInput" accept=".csv,.xlsx" />
+    </section>
+  </main>
+  <script src="assets/js/upload.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reports - Excel Analytics</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Excel Analytics Dashboard</h2>
+  </div>
+  <nav class="sidebar">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="upload.html">Upload File</a>
+    <a href="reports.html" class="active">Reports</a>
+    <a href="login.html">Logout</a>
+  </nav>
+  <main class="main-content">
+    <section class="card">
+      <h2>Uploaded Files</h2>
+      <div class="filter-bar">
+        <input type="text" placeholder="Search filename..." id="searchInput">
+      </div>
+      <table class="table-preview">
+        <thead>
+          <tr>
+            <th>Filename</th>
+            <th>File Type</th>
+            <th>Date</th>
+            <th>Preview</th>
+          </tr>
+        </thead>
+        <tbody id="reports-table"></tbody>
+      </table>
+    </section>
+    <div id="preview-modal" style="display:none;position:fixed;top:10%;left:50%;transform:translateX(-50%);background:#fff;padding:2rem;border-radius:14px;box-shadow:0 16px 32px rgba(84,104,255,0.15);z-index:1000;">
+      <button id="close-preview" style="float:right;">Close</button>
+      <div id="preview-content"></div>
+    </div>
+  </main>
+  <script src="assets/js/reports.js"></script>
+</body>
+</html>
